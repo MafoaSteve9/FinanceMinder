@@ -27,7 +27,7 @@ export class ConnexionFormComponent {
       if (email === 'test@example.com' && password === 'password') {
         this.router.navigate(['/']);
       } else {
-        alert('Invalid credentials');
+       console.log('Invalid credentials');
       }
     }
   }
