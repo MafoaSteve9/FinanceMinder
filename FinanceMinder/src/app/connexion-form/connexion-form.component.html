@@ -1,0 +1,19 @@
+       <form [formGroup]="form" (ngSubmit)="onSubmit()">
+         <label for="email">Email:</label>
+         <input id="email" formControlName="email">
+         @if (form.get('email')?.invalid && form.get('email')?.touched) {
+          <div>
+            Enter a valid email.
+          </div>
+         }
+
+         <label for="password">Password:</label>
+         <input id="password" type="password" formControlName="password">
+         @if (form.get('password')?.invalid && form.get('password')?.touched) {
+          <div>
+            Password is required.
+          </div>
+         }
+
+         <button type="submit" [disabled]="form.invalid">Login</button>
+       </form>
